@@ -18,13 +18,22 @@ In development
 
 ## Background
 
-San Francisco is a hyper-popular city with homeless community (20% of population), natural disaster risks and astronomical housing prices. Affordable housing in San Francisco has not been an option. Meanwhile, new affordable construction projects are high in need. Many investors consider construction projects to invest in SF, which can provide high return rate. For construction projects, engineers struggle to predict the construction project cost as reasonable as possible to win biddings. 🏗️ 💸
+Credit risk modeling is important for financial institutions. It represents the risk of borroer not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling. In the recession of 2008,
 
 ## Project
 
 This project is an AI-powered project to model the credit risk in compliance with the Basel accords.
 
-Credit risk modeling is important for financial institutions. It represents the risk of borroer not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling. In the recession of 2008,
+The goal is to build a credit risk model by using Loan Data to provide them a scorecard to use in their daily use as well a pipeline to calculate exposure loss.
+
+Here is a step-by-step instruction as also in compliance with the Basel II requirements:
+
+*  Calculate the PD model with logistic regression
+*  Based on PD model, provide a practical scorecard in csv format
+*  Construct LGD model with beta regression
+*  Build EAD model with beta regression
+*  Calculate the exposure loss after obtaining all models
+*  Check the models if they are still doing good with the recent credit risk modeling.
 
 ## Key documents
 	
