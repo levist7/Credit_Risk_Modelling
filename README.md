@@ -53,7 +53,7 @@ Project is created with:
 
 ## Datasets
 
-The dataset comes from Lending Club. It is a large US peer-to-peer lending company. Different versions of this dataset existing, here the data was taken from a version available on (kaggle.com)[https://www.kaggle.com/wendykan/lending-club-loan-data/version/1] 
+The dataset comes from Lending Club. It is a large US peer-to-peer lending company. Different versions of this dataset existing, here the data was taken from a version available on [kaggle.com](https://www.kaggle.com/wendykan/lending-club-loan-data/version/1) 
 
 It contains all available data for more than 800,000 consumer loans issued from 2007 to 2015.
 
@@ -64,7 +64,7 @@ The data was then divided into two: one including data from 2007 to 2014 and ano
 To run this project, 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/LHB-Group/Civil-Work-Bidding-And-Investment-Helper.git
+   git clone https://github.com/levist7/CreditRiskModelling_PD_LGD_EDA_EL.git
    ```
 2. Install [packages](#technologies)
 
