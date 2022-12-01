@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+cpi == 1.0.5
+scikit-learn == 1.0.2
+xgboost
+lightgbm
+pipenv
+scipy
+statsmodels
