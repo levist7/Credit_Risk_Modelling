@@ -22,22 +22,9 @@ San Francisco is a hyper-popular city with homeless community (20% of population
 
 ## Project
 
-This project is an AI-powered app 🧠🤖 to estimate cost of construction projects in San Francisco. 
+This project is an AI-powered project to model the credit risk in compliance with the Basel accords.
 
-* [Presentation of project](https://docs.google.com/presentation/d/1uWvuKxi8LZJN_XV6F3pEtfRy1y2JgECC/edit?usp=sharing&ouid=117915938711430623839&rtpof=true&sd=true)
-
-Some of the efforts include data cleaning, feature engineering, setting up machine learning models, predictive error calculation, parameter tuning, creating a dashboard and deploying an online app. 
-
-Machine learning models were trained with the historical data coming from building permits of San Francisco available
-since early 1980s (thanks to datasf.org). A set of parameters and machine learning models were tested (including Linear,Lasso model, E-Net, KRidge, GBoosting, XGBoost, LGBoost and Random Forest). **Random Forest Model**🌲🌳🌲🌳 was judged to use as a final model.
-
-> Structural work cost 
-
-> ✅ include cost of foundation, columns, beams, slabs, floors, roof and workmanship cost
-
-> ❌ does not include land price, finishing work, electricity & plumbing and commercial costs
-
-![pipeline](https://github.com/LHB-Group/Civil-Work-Bidding-And-Investment-Helper/blob/0b9bc8a0add95aa4bfb8555bd3746303d31c0cf0/.img_pipeline.PNG)
+Credit risk modeling is important for financial institutions. It represents the risk of borroer not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling. In the recession of 2008,
 
 ## Key documents
 	
@@ -81,7 +68,7 @@ To run this project,
 
     .
     ├── NoteBooks               # Jupyter notebooks on ....
-    ├── src                     # Scripts on functions 
+    ├── src                     # Scripts on functions ...
     ├── LICENSE
     ├── README.md 
     └── requirements.txt
