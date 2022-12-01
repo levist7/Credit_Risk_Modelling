@@ -38,10 +38,10 @@ Here is a step-by-step instruction as also in compliance with the Basel II requi
 ## Key documents
 	
 Notebooks  
-1 - A preprocessing notebook
-2 - A notebook on selecting features for probability of default (PD) and modelling PD
-3 - A notebook on checking population stability index
-4 - A notebook on modelling loss given default (LGD), exposure at default (EAD) and Expected Loss (EL)
+1 - A preprocessing notebook  
+2 - A notebook on selecting features for probability of default (PD) and modelling PD  
+3 - A notebook on checking population stability index  
+4 - A notebook on modelling loss given default (LGD), exposure at default (EAD) and Expected Loss (EL)  
 
 ## Technologies
 
