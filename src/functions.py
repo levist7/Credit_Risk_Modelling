@@ -7,6 +7,14 @@ import seaborn as sns
 sns.set()
 
 
+#lib to download dataset on g drive
+import gdown
+
+from sklearn import linear_model
+import scipy.stats as stat
+
+
+# functions used in notebook 1 
 
 # woe_discrete function is adapted from the 365 datascience class material.
 # more information on woe calculation can be found on
@@ -106,7 +114,7 @@ def preproc_input(loan_data):
   #good is 1, bad is 0
   loan_data['good_bad'] = np.where(loan_data['loan_status'].isin(bad_def), 0, 1) 
   return loan_data
-  
+
 def preproc_input(df_inputs_prepr):
   # Preprocessing - Input
   #1
@@ -245,3 +253,102 @@ def preproc_input(df_inputs_prepr):
   df_inputs_prepr['mths_since_last_record:81-86'] = np.where((df_inputs_prepr['mths_since_last_record'] >= 81) & (df_inputs_prepr['mths_since_last_record'] <= 86), 1, 0)
   df_inputs_prepr['mths_since_last_record:>=86'] = np.where((df_inputs_prepr['mths_since_last_record'] > 86), 1, 0)
   return df_inputs_prepr
+
+# End of functions used in Notebook 1 
+
+
+# Functions used in Notebook 2 and 3
+
+def g_down (fname,output):
+  """
+  function downloading G-drive files with a given input fname and output name
+  """
+  url = 'https://drive.google.com/uc?id=' + fname.split('/')[-2] 
+  gdown.download(url, output, quiet=False)
+
+
+# Scikit-learn does not support statistical inference. 
+# To obtain out-of-the-box coefficients significance tests, we need Logit estimator from Statsmodels
+# P values for sklearn logistic regression.
+# Class to display p-values for logistic regression in sklearn.
+# ref. https://gist.github.com/rspeare/77061e6e317896be29c6de9a85db301d
+
+class LogisticRegression_with_p_values:
+    """
+    Wrapper Class for Logistic Regression which has the usual sklearn instance 
+    in an attribute self.model, and pvalues, z scores and estimated 
+    errors for each coefficient in 
+    
+    self.z_scores
+    self.p_values
+    self.sigma_estimates
+    
+    as well as the negative hessian of the log Likelihood (Fisher information)
+    
+    self.F_ij
+    """
+    
+    def __init__(self,*args,**kwargs):#,**kwargs):
+        self.model = linear_model.LogisticRegression(*args,**kwargs)#,**args)
+
+    def fit(self,X,y):
+        self.model.fit(X,y)
+        
+        #### Get p-values for the fitted model ####
+        denom = (2.0 * (1.0 + np.cosh(self.model.decision_function(X))))
+        denom = np.tile(denom,(X.shape[1],1)).T
+        F_ij = np.dot((X / denom).T,X) ## Fisher Information Matrix
+        Cramer_Rao = np.linalg.inv(F_ij) ## Inverse Information Matrix
+        sigma_estimates = np.sqrt(np.diagonal(Cramer_Rao))
+        z_scores = self.model.coef_[0] / sigma_estimates # z-score for each model coefficient
+        p_values = [stat.norm.sf(abs(x)) * 2 for x in z_scores] ### two tailed test for p-values
+        
+        self.coef_ = self.model.coef_
+        self.intercept_ = self.model.intercept_
+        self.p_values = p_values
+
+# following function is taken as adapted in a lecture note of 365 datascience
+# will be imported to src file
+
+# Since we are using an object oriented language such as Python, we can simply define our own 
+# LinearRegression class (the same one from sklearn)
+# By typing the code below we will ovewrite a part of the class with one that includes p-values
+# Here's the full source code of the ORIGINAL class: https://github.com/scikit-learn/scikit-learn/blob/7b136e9/sklearn/linear_model/base.py#L362
+
+
+class LinearRegression(linear_model.LinearRegression):
+    """
+    LinearRegression class after sklearn's, but calculate t-statistics
+    and p-values for model coefficients (betas).
+    Additional attributes available after .fit()
+    are `t` and `p` which are of the shape (y.shape[1], X.shape[1])
+    which is (n_features, n_coefs)
+    This class sets the intercept to 0 by default, since usually we include it
+    in X.
+    """
+    
+    # nothing changes in __init__
+    def __init__(self, fit_intercept=True, normalize=False, copy_X=True,
+                 n_jobs=1):
+        super().__init__(fit_intercept=fit_intercept, normalize=normalize, copy_X=copy_X, n_jobs=n_jobs)
+        self.fit_intercept = fit_intercept
+        self.normalize = normalize
+        self.copy_X = copy_X
+        self.n_jobs = n_jobs
+
+    
+    def fit(self, X, y, n_jobs=1):
+        self = super(LinearRegression, self).fit(X, y, n_jobs)
+        
+        # Calculate SSE (sum of squared errors)
+        # and SE (standard error)
+        sse = np.sum((self.predict(X) - y) ** 2, axis=0) / float(X.shape[0] - X.shape[1])
+        se = np.array([np.sqrt(np.diagonal(sse * np.linalg.inv(np.dot(X.T, X))))])
+
+        # compute the t-statistic for each feature
+        self.t = self.coef_ / se
+        # find the p-value for each feature
+        self.p = np.squeeze(2 * (1 - stat.t.cdf(np.abs(self.t), y.shape[0] - X.shape[1])))
+        return self
+
+# End of functions used in Notebook 2 and 3
