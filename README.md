@@ -32,6 +32,8 @@ Here is a step-by-step instruction as also in compliance with the Basel II requi
 *  Calculate the exposure loss after obtaining all models
 *  Check the models if they are still doing good with the recent credit risk modeling.
 
+Please note that, in this project, the methodology in the lecture notes of Credit Risk Modeling in Python by N Georgiev is followed.
+
 ## Key documents
 	
 Notebooks  
