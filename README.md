@@ -1,7 +1,5 @@
 # Credit Risk Modelling | Calculation of PD, LGD, EDA and EL with Machine Learning in Python  
 
-In development
-
 ![python-shield](https://forthebadge.com/images/badges/made-with-python.svg)
 
 ## Table of contents
@@ -18,7 +16,7 @@ In development
 
 ## Background
 
-Credit risk modeling is important for financial institutions. It represents the risk of borroer not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling. In the recession of 2008,
+Credit risk modeling is important for financial institutions. It represents the risk of borrower not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling. In the recession of 2008,
 
 ## Project
 
@@ -40,8 +38,8 @@ Here is a step-by-step instruction as also in compliance with the Basel II requi
 Notebooks  
 1 - A preprocessing notebook  
 2 - A notebook on selecting features for probability of default (PD) and modelling PD  
-3 - A notebook on checking population stability index  
-4 - A notebook on modelling loss given default (LGD), exposure at default (EAD) and Expected Loss (EL)  
+3 - A notebook on modelling loss given default (LGD), exposure at default (EAD) and Expected Loss (EL)  
+4 - A notebook on checking population stability index  
 
 ## Technologies
 
