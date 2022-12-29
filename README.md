@@ -11,8 +11,7 @@
 * [Getting Started](#getting-started)
 * [Top-directory layout](#top-directory-layout)
 * [License](#license)
-* [Author](#author)
-* [Contact](#contact)
+* [Author](#author) 
 
 ## Background
 
@@ -87,10 +86,6 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 ## Author
 
 [levist7](https://github.com/levist7)
-
-## Contact
-
-...
 
 ---
 Made with ❤️ in Paris
