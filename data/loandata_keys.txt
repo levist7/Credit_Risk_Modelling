@@ -1,3 +1,5 @@
+Variables used in the modeling
+
 **Discrete Variables**
 
 1. 'grade': assigned loan grade  
