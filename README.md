@@ -24,10 +24,6 @@ Credit risk modeling is important for financial institutions. It represents the 
 
 <img src= ".pipeline_sum.jpg">
 
-## Background
-
-Credit risk modeling is important for financial institutions. It represents the risk of borrower not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling.
-
 ## Project
 
 This project is an AI-powered project to model the credit risk in compliance with the Basel accords.
