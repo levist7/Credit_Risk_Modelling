@@ -1,0 +1,32 @@
+**Discrete Variables**
+
+1. 'grade': assigned loan grade  
+2. 'sub_grade': LC assigned loan subgrade taxliens
+3. 'home_ownership': the home ownership status provided by the borrower during registration. Values are: RENT, OWN, MORTGAGE, OTHER.
+4. addr_state: The state provided by the borrower in the loan application
+5. 'verification_status': Indicates if the borrowers' joint income was verified by LC, not verified, or if the income source was verified
+6. 'purpose': A category provided by the borrower for the loan request.
+7. 'initial_list_status': The initial listing status of the loan. Possible values are – W, F
+
+---
+**Continuous Variables**
+1. 'term': number of payments on the loan. Values are in months and can be either 36 or 60.
+2. 'emp_length': Employment length in years. Possible values are between 0 and 10 where 0 means less than one year and 10 means ten or more years.
+3. 'int_rate': Interest rate on the loan
+4. 'mths_since_earliest_cr_line': date the borrower's earliest reported credit line was opened
+5. 'delinq_2yrs': The number of 30+ days past-due incidences of delinquency in the borrower's credit file for the past 2 years
+6. 'inq_last_6mths': The number of inquiries in past 6 months (excluding auto and mortgage inquiries)
+7. 'open_acc': The number of open credit lines in the borrower's credit file
+8. 'pub_rec' : Number of derogatory public records
+9. 'total_acc': The total number of credit lines currently in the borrower's credit file
+10. 'acc_now_delinq': The number of accounts on which the borrower is now delinquent.
+11. 'total_rev_hi_lim': Total revolving high credit/credit limit
+12. 'annual_inc': The self-reported annual income provided by the borrower during registration.
+13. 'dti': A ratio calculated using the borrower’s total monthly debt payments on the total debt obligations, excluding mortgage and the requested LC loan, divided by the borrower’s self-reported monthly income.
+14. 'mths_since_last_delinq': The number of months since the borrower's last delinquency.
+15. 'mths_since_last_record': The number of months since the last public record.
+
+
+
+Please note that the following column is not considered in the example herein but would have improved the prediction scores.
+* 'mths_since_issue_d': Months since most recent issue d 
