@@ -2,11 +2,8 @@ numpy
 pandas
 matplotlib
 seaborn
-plotly
-cpi == 1.0.5
+gdown
 scikit-learn == 1.0.2
-xgboost
-lightgbm
-pipenv
+pickle
 scipy
-statsmodels
+cpi == 1.0.5 #will need it

@@ -24,6 +24,10 @@ Credit risk modeling is important for financial institutions. It represents the 
 
 <img src= ".pipeline_sum">
 
+## Background
+
+Credit risk modeling is important for financial institutions. It represents the risk of borrower not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling. In the recession of 2008,
+
 ## Project
 
 This project is an AI-powered project to model the credit risk in compliance with the Basel accords.
@@ -84,6 +88,16 @@ Following models are trained for the use in our case
 3. Models on loss given default (LGD), exposure at default (EAD) and expected loss (EL)  
 4. Schema to check the population stability index with the recent data
 
+Please note that, in this project, the methodology in the lecture notes of Credit Risk Modeling in Python by N Georgiev is followed.
+
+## Key documents
+	
+Notebooks  
+1 - A preprocessing notebook  
+2 - A notebook on selecting features for probability of default (PD) and modelling PD  
+3 - A notebook on modelling loss given default (LGD), exposure at default (EAD) and Expected Loss (EL)  
+4 - A notebook on checking population stability index  
+
 ## Technologies
 
 Project is created with:
@@ -125,9 +139,6 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 ## Author
 
 [levist7](https://github.com/levist7)
-
-...
-
 ---
 Made with ❤️ in Paris
 ---
