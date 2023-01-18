@@ -22,11 +22,11 @@ Credit risk modeling is important for financial institutions. It represents the 
 
 ## Pipeline  
 
-<img src= ".pipeline_sum">
+<img src= ".pipeline_sum.jpg">
 
 ## Background
 
-Credit risk modeling is important for financial institutions. It represents the risk of borrower not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling. In the recession of 2008,
+Credit risk modeling is important for financial institutions. It represents the risk of borrower not being able to pay back the loan amount, credit card or other types of loans. In some cases, borrowers can pay only partial of the amount and the principal amount and interest amount are not paid. Both statistics and machine learning play an important role in handling big data and provide statistical modeling.
 
 ## Project
 
@@ -71,7 +71,7 @@ Following models are trained for the use in our case
 
 2.  Loss given default (LGD)  
 **Model - Stage/step 1**: Logistic regression  
-**Metrics**: Accuracy: 0.572 | Area under ROC: 0.684 > 0.50  
+**Metrics**: Accuracy: 0.595 | Area under ROC: 0.640 > 0.50  
 **Model - Stage/step 2**: Linear regression  
 **Metric**: Accuracy: 0.777
 
