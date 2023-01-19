@@ -37,7 +37,7 @@ Here is a step-by-step instruction as also in compliance with the Basel II requi
 *  Calculate the PD model with logistic regression
 *  Based on PD model, provide a practical scorecard in csv format
 *  Construct LGD model with beta regression
-*  Build EAD model with beta regression
+*  Build EAD model with linear regression
 *  Calculate the exposure loss after obtaining all models
 *  Check the models if they are still doing good with the recent credit risk modeling.
 
