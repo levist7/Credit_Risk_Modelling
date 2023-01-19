@@ -133,9 +133,9 @@ To run this project,
 
 Distributed under the MIT License. See LICENSE.txt for more information.
 
-## Author
+## Author  
 
-[levist7](https://github.com/levist7)
+* [levist7](https://github.com/levist7)
 ---
 Made with ❤️ in Paris
 ---
