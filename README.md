@@ -110,7 +110,7 @@ Or, the github project can be readily loaded on [colab-google](https://colab.res
 To run this project, 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/levist7/CreditRiskModelling_PD_LGD_EDA_EL.git
+   git clone https://github.com/levist7/Credit_Risk_Modelling.git
    ```
 2. Install [packages](#technologies)
 
