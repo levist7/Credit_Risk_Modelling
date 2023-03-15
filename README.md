@@ -83,9 +83,7 @@ Following models are trained for the use in our case
 1. Scorecard, easy to interpret in comliance with the requirements    
 2. Dataframe to test the impact of cut off rates on the number of accepted borrowers for credit
 3. Models on loss given default (LGD), exposure at default (EAD) and expected loss (EL)  
-4. Schema to check the population stability index with the recent data
-
-*Please note that, in this project, the methodology in the lecture notes of Credit Risk Modeling in Python by N Georgiev is followed.*
+4. Schema to check the population stability index with the recent data  
 
 ## Key documents
 	
